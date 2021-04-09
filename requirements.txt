@@ -1,0 +1,6 @@
+Flask
+flask_pymongo
+bs4
+python-dotenv
+requests
+wtforms
