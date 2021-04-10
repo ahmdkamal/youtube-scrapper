@@ -1,0 +1,114 @@
+{
+	"info": {
+		"_postman_id": "579927fe-daf3-4c32-8575-b3af586107de",
+		"name": "Scrapping",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Scrapping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "url",
+							"value": "https://www.youtube.com/watch?v=cnZfPPiivwk&list=RDMMcnZfPPiivwk",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/youtube/scrap",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"youtube",
+						"scrap"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Scrapping",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "url",
+									"value": "https://www.youtube.com/watch?v=cnZfPPiivwk&list=RDMMcnZfPPiivwk",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/youtube/scrap",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"youtube",
+								"scrap"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4996"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/1.0.1 Python/2.7.18"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 10 Apr 2021 09:02:55 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"_id\": \"607169bf4ba22321887bbc1e\",\n            \"duration\": \"3:01\",\n            \"image_path\": \"http://localhost:5555/images/LY0EYTK1ZSIHK5S2RMGD.jpg\",\n            \"thumbnail\": \"https://i.ytimg.com/vi/cnZfPPiivwk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCWa_iTrt2xRVc0GzLyBH-RE1r4YQ\",\n            \"title\": \"Cairokee - Samurai كايروكي - ساموراي\",\n            \"url\": \"https://www.youtube.com/watch?v=cnZfPPiivwk&list=RDMMcnZfPPiivwk&index=1\",\n            \"views\": \"896,197 مشاهدة\"\n        },\n        {\n            \"_id\": \"607169bf4ba22321887bbc21\",\n            \"duration\": \"2:49\",\n            \"image_path\": \"http://localhost:5555/images/VLJHYWJ6W414D78ZPODC.jpg\",\n            \"thumbnail\": \"https://i.ytimg.com/vi/-tcq9HGm0Lk/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCoIPJwKrVQM1I3-Y1nsLekVIU8Wg\",\n            \"title\": \"مهرجان متغاظ عارفك يلا مننا متغاظ -  انا عظمه انا جامد - مصطفى الدجوى و محمد زيزو - مهرجانات 2021\",\n            \"url\": \"https://www.youtube.com/watch?v=-tcq9HGm0Lk&list=RDMMcnZfPPiivwk&index=4\",\n            \"views\": \"90 ألف مشاهدة\"\n        },\n        {\n            \"_id\": \"607169bf4ba22321887bbc23\",\n            \"duration\": \"3:19\",\n            \"image_path\": \"http://localhost:5555/images/TPM81TIFAKDZCOH0RHWH.jpg\",\n            \"thumbnail\": \"https://i.ytimg.com/vi/gbt6cTZSKgo/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC5sOlvXQbiWu_sFvKBGzhHOpRtNQ\",\n            \"title\": \"Ruby - Hetta Tanya [ Official Lyrics Video] | روبي - حته تانيه\",\n            \"url\": \"https://www.youtube.com/watch?v=gbt6cTZSKgo&list=RDMMcnZfPPiivwk&index=7\",\n            \"views\": \"1.5 مليون مشاهدة\"\n        },\n        {\n            \"_id\": \"607169bf4ba22321887bbc24\",\n            \"duration\": \"7:34\",\n            \"image_path\": \"http://localhost:5555/images/2Q8W70AYDGM4DHB107HU.jpg\",\n            \"thumbnail\": \"https://i.ytimg.com/vi/ou-7AboPoXE/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLAH_i3Hxpl6KD6cAH9Lz2YByUHXZA\",\n            \"title\": \"ڤيديو كليب ناسيني ليه - تامر حسني / Naseny Leh - Music video 4K - Tamer Hosny\",\n            \"url\": \"https://www.youtube.com/watch?v=ou-7AboPoXE&list=RDMMcnZfPPiivwk&index=9\",\n            \"views\": \"113 مليون مشاهدة\"\n        },\n        {\n            \"_id\": \"607169bf4ba22321887bbc27\",\n            \"duration\": \"4:37\",\n            \"image_path\": \"http://localhost:5555/images/9XO4GVYZ14EHMJ8167KQ.jpg\",\n            \"thumbnail\": \"https://i.ytimg.com/vi/l5ozpoOmvNc/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLC5P3tJG4UbbvLpmCXuCHc2tKbOVQ\",\n            \"title\": \"Cairokee - Ya Abyad Ya Eswed كايروكي - يا أبيض يا أسود\",\n            \"url\": \"https://www.youtube.com/watch?v=l5ozpoOmvNc&list=RDMMcnZfPPiivwk&index=12\",\n            \"views\": \"377 ألف مشاهدة\"\n        },\n        {\n            \"_id\": \"607169bf4ba22321887bbc28\",\n            \"duration\": \"3:27\",\n            \"image_path\": \"http://localhost:5555/images/JCQ8N17WY0RTH1BZJ22L.jpg\",\n            \"thumbnail\": \"https://i.ytimg.com/vi/gtMEuvNktDA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLCd_6fRfLcH8vpu0KPft3mkEoX3mQ\",\n            \"title\": \"Tamer Hosny ... Awelny Kalam - 2020 | تامر حسني ... قولني كلام\",\n            \"url\": \"https://www.youtube.com/watch?v=gtMEuvNktDA&list=RDMMcnZfPPiivwk&index=13\",\n            \"views\": \"6.2 مليون مشاهدة\"\n        },\n        {\n            \"_id\": \"607169bf4ba22321887bbc2b\",\n            \"duration\": \"4:14\",\n            \"image_path\": \"http://localhost:5555/images/WD91MBKE5HOKWXYS4JJ3.jpg\",\n            \"thumbnail\": \"https://i.ytimg.com/vi/VD6PJkd6mhA/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBY9rkrPaWUgX8BawqmKYR2ktTg6Q\",\n            \"title\": \"Ramy Gamal - Sa'af (Official Music Video) | رامي جمال - سقف - الفيديو كليب الرسمي\",\n            \"url\": \"https://www.youtube.com/watch?v=VD6PJkd6mhA&list=RDMMcnZfPPiivwk&index=16\",\n            \"views\": \"8.5 مليون مشاهدة\"\n        }\n    ],\n    \"msg\": \"Success\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:5555"
+		}
+	]
+}
