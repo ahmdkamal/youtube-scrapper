@@ -3,12 +3,7 @@ from flask import json
 import requests
 import re
 from bs4 import BeautifulSoup
-from app import app
-from flask_pymongo import PyMongo
-
-mongo = PyMongo(app)
-db = mongo.db
-
+from app import config
 
 class YoutubeService:
 
@@ -64,7 +59,7 @@ class YoutubeService:
                     'title': content['title']['simpleText'],
                     'thumbnail': thumbnail,
                     'views': views,
-                    'image_path': image_name
+                    'image_path': config['APP_URL'] + image_name[1:]
                 }
                 async_class.save_data(collection='videos', row=row)
                 row['_id'] = str(row['_id'])
@@ -97,7 +92,7 @@ class YoutubeService:
                         'title': content['title']['runs'][0]['text'],
                         'thumbnail': thumbnail,
                         'views': content['viewCountText']['simpleText'],
-                        'image_path': image_name
+                        'image_path': config['APP_URL'] + image_name[1:]
                     }
                     async_class.save_data(collection='videos', row=row)
                     row['_id'] = str(row['_id'])
