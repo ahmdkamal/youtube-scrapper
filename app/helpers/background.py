@@ -9,7 +9,10 @@ mongo = PyMongo(app)
 db = mongo.db
 
 
-class Background():
+class Background:
+    def __init__(self):
+        pass
+
     def download(self, file_link):
         image_name = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(20))
         image_name = './images/' + image_name + '.jpg'

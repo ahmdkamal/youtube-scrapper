@@ -3,3 +3,4 @@
 data/mongo/*
 images
 venv
+app/data.json

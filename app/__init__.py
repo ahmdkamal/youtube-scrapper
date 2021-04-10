@@ -6,7 +6,7 @@ config = dotenv_values(".env")
 app.config["MONGO_URI"] = "mongodb://" + config['DATABASE_USERNAME'] + ":" + config[
     'DATABASE_PASSWORD'] + "@mongo-inmobly/" + config['DATABASE_NAME'] + "?authSource=admin"
 
-from app.src import youtube
+from app.src import youtube_controller
 from app.helpers import response
 
 

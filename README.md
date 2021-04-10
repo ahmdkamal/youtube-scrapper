@@ -1,6 +1,6 @@
 ## The Goal
 
-You will send url for a playlist or channel on youtube, and it will save its content in db
+You will send url for a playlist or channel on YouTube, and it will save its content in db
 
 - views
 - title
@@ -11,9 +11,13 @@ You will send url for a playlist or channel on youtube, and it will save its con
 
 <b>NOTE :::</b> Videos' thumbnail are downloaded in the background
 
+### Architecture
+
+Using Controller, Service Pattern
+
 ### Prerequisite
 
-- Docker should be installed locally
+Docker should be installed locally
 
 ## How to run the application
 
