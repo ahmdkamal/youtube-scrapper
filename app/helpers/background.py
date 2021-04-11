@@ -2,7 +2,6 @@ import random
 import string
 import urllib
 import threading
-from app import db
 
 
 class Background:
@@ -16,12 +15,5 @@ class Background:
         download_thread.start()
         return image_name
 
-    def save_data(self, collection, row):
-        download_thread = threading.Thread(target=self.save_data_to_database, args=(collection, row,))
-        download_thread.start()
-
     def save_image_from_link(self, file_link, image_name):
         urllib.urlretrieve(file_link, image_name)
-
-    def save_data_to_database(self, collection, row):
-        db[collection].insert(row)

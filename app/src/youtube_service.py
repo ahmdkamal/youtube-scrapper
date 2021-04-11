@@ -4,6 +4,8 @@ import requests
 import re
 from bs4 import BeautifulSoup
 from app import config
+from app.src import youtube_repository
+
 
 class YoutubeService:
 
@@ -36,6 +38,8 @@ class YoutubeService:
         rows = []
         i = 0
         async_class = background.Background()
+        # Should be injected
+        repo = youtube_repository.YoutubeRepository()
 
         for content in data['contents']['twoColumnWatchNextResults']['playlist']['playlist']['contents']:
             content = content['playlistPanelVideoRenderer']
@@ -61,7 +65,7 @@ class YoutubeService:
                     'views': views,
                     'image_path': config['APP_URL'] + image_name[1:]
                 }
-                async_class.save_data(collection='videos', row=row)
+                repo.save_video(row=row)
                 row['_id'] = str(row['_id'])
                 rows.append(row)
             except:
@@ -75,6 +79,8 @@ class YoutubeService:
         rows = []
         try:
             async_class = background.Background()
+            # Should be injected
+            repo = youtube_repository.YoutubeRepository()
 
             for content in data['contents']['twoColumnBrowseResultsRenderer']['tabs'][1]['tabRenderer'][
                 'content']['sectionListRenderer']['contents'][0]['itemSectionRenderer']['contents'][0]['gridRenderer'][
@@ -94,7 +100,7 @@ class YoutubeService:
                         'views': content['viewCountText']['simpleText'],
                         'image_path': config['APP_URL'] + image_name[1:]
                     }
-                    async_class.save_data(collection='videos', row=row)
+                    repo.save_video(row=row)
                     row['_id'] = str(row['_id'])
                     rows.append(row)
                 except:
