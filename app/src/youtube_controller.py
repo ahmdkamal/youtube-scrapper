@@ -5,7 +5,7 @@ from youtube_validation import ScrapValidation
 from youtube_service import YoutubeService
 
 
-@app.route('/youtube/scrap', methods=['POST'])
+@app.route('/api/v1/videos/scrap', methods=['POST'])
 def get_scrap():
     form = ScrapValidation(request.form)
     if not form.validate():

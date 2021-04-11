@@ -13,7 +13,7 @@ You will send url for a playlist or channel on YouTube, and it will save its con
 
 ### Architecture
 
-Using Controller, Service Pattern
+Using Controller, Service, Repository Pattern
 
 ### Prerequisite
 
@@ -27,7 +27,7 @@ Docker should be installed locally
 
 ### How to access
 
-call in postman or curl `POST http://localhost:YOUR_APP_PORT_IN_ENV/youtube/scrap` with form data has key called `url`
+call in postman or curl `POST http://localhost:YOUR_APP_PORT_IN_ENV/api/v1/videos/scrap` with form data has key called `url`
 (check collection)
 
 ### What is used
